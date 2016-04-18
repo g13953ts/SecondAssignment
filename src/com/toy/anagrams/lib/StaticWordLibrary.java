@@ -85,7 +85,7 @@ final class StaticWordLibrary extends WordLibrary {
         "traditional"};
 
     private static final String[] SCRAMBLED_WORD_LIST = {
-        "botanicstar"
+        "botanicstar",
         "maibuguos",
         "ratimhteci",
         "abkclssha",
