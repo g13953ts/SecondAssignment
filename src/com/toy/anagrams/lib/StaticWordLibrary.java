@@ -49,6 +49,7 @@ final class StaticWordLibrary extends WordLibrary {
         "decrementing",
         "dependency",
         "disambiguate",
+        "dormitory",
         "dynamic",
         "encapsulation",
         "equivalent",
@@ -84,7 +85,7 @@ final class StaticWordLibrary extends WordLibrary {
         "traditional"};
 
     private static final String[] SCRAMBLED_WORD_LIST = {
-        "batsartcoin",
+        "botanicstar"
         "maibuguos",
         "ratimhteci",
         "abkclssha",
@@ -96,6 +97,7 @@ final class StaticWordLibrary extends WordLibrary {
         "edrcmeneitgn",
         "edepdnneyc",
         "idasbmgiauet",
+        "dirtyroom",
         "ydanicm",
         "neacsplutaoni",
         "qeiuaveltn",
