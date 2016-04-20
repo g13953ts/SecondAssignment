@@ -92,6 +92,16 @@ public class Anagrams extends JFrame {
         Dimension frameSize = getSize();
         setLocation(new Point((screenSize.width - frameSize.width) / 2,
                               (screenSize.height - frameSize.width) / 2));
+        
+        
+        //課題2-3　サード
+        if(selectLevel.equals("level 1"))
+        	for(int i=0;i<10;i++)wordLibrary.shuffle(wordLibrary.getWord(wordIdx));
+        if(selectLevel.equals("level 2"))
+        	for(int i=0;i<20;i++)wordLibrary.shuffle(wordLibrary.getWord(wordIdx));
+        if(selectLevel.equals("level 3"))
+        	for(int i=0;i<30;i++)wordLibrary.shuffle(wordLibrary.getWord(wordIdx));
+        
     }
     
     /** This method is called from within the constructor to
@@ -217,8 +227,7 @@ public class Anagrams extends JFrame {
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
         gridBagConstraints.fill = java.awt.GridBagConstraints.HORIZONTAL;
-        mainPanel.add(selectLevel, gridBagConstraints);
-
+        mainPanel.add(selectLevel, gridBagConstraints);             
         getContentPane().add(mainPanel, java.awt.BorderLayout.CENTER);
 
         fileMenu.setMnemonic('F');
