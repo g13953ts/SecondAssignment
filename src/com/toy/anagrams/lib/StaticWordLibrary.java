@@ -35,10 +35,10 @@ package com.toy.anagrams.lib;
  * Implementation of the logic for the Anagram Game application.
  */
 final class StaticWordLibrary extends WordLibrary {
-
-    private static final String[] WORD_LIST = {
-        "abstraction",
-        "ambiguous",
+		
+	private static final String[] WORD_LIST = {
+		"abstraction",
+		"ambiguous",
         "arithmetic",
         "backslash",
         "bitmap",
@@ -83,7 +83,7 @@ final class StaticWordLibrary extends WordLibrary {
         "unsigned",
         "traditional"};
 
-    private static final String[] SCRAMBLED_WORD_LIST = {
+    private static final String SCRAMBLED_WORD_LIST[] = {
         "batsartcoin",
         "maibuguos",
         "ratimhteci",
@@ -131,6 +131,15 @@ final class StaticWordLibrary extends WordLibrary {
         "rtdatioialn"
     };
     
+    public static void shuffle(String[] shf) {
+    	for(int i=shf.length-1; i>0; i--) {
+    		int t = (int)(Math.random()*i);
+    		String tmp = shf[i];
+    		shf[i] = shf[t];
+    		shf[t] = tmp;
+    	}
+    }
+    
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
     /**
@@ -154,6 +163,7 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
+    	shuffle(SCRAMBLED_WORD_LIST);
         return SCRAMBLED_WORD_LIST[idx];
     }
 
