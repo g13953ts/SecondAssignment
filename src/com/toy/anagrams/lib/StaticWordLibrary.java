@@ -49,6 +49,7 @@ final class StaticWordLibrary extends WordLibrary {
         "decrementing",
         "dependency",
         "disambiguate",
+        "dormitory",
         "dynamic",
         "encapsulation",
         "equivalent",
@@ -84,7 +85,7 @@ final class StaticWordLibrary extends WordLibrary {
         "traditional"};
 
     private static final String[] SCRAMBLED_WORD_LIST = {
-        "batsartcoin",
+        "botanicstar",
         "maibuguos",
         "ratimhteci",
         "abkclssha",
@@ -96,6 +97,7 @@ final class StaticWordLibrary extends WordLibrary {
         "edrcmeneitgn",
         "edepdnneyc",
         "idasbmgiauet",
+        "dirtyroom",
         "ydanicm",
         "neacsplutaoni",
         "qeiuaveltn",
@@ -131,6 +133,15 @@ final class StaticWordLibrary extends WordLibrary {
         "rtdatioialn"
     };
     
+    public static void shuffle(String[] shf) {
+    	for(int i=shf.length-1; i>0; i--) {
+    		int t = (int)(Math.random()*i);
+    		String tmp = shf[i];
+    		shf[i] = shf[t];
+    		shf[t] = tmp;
+    	}
+    }
+    
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
     /**
@@ -154,6 +165,7 @@ final class StaticWordLibrary extends WordLibrary {
      * @return word at that index in its scrambled form
      */
     public String getScrambledWord(int idx) {
+    	shuffle(SCRAMBLED_WORD_LIST);
         return SCRAMBLED_WORD_LIST[idx];
     }
 
